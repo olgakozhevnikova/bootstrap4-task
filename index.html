@@ -30,28 +30,12 @@
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
-            <span class="navbar-text">
+                <span class="navbar-text">
                     <a data-toggle="modal" data-target="#loginModal"><span class="fa fa-sign-in fa-lg"></span> Login</a>
                 </span>
             </div>
         </div>
     </nav> 
-    <header class="jumbotron">
-        <div class="container">
-            <div class="row row-header">
-                <div class="col-12 col-sm-8 col-md-6">
-                    <h1>Ristorante con Fusion</h1>
-                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
-                </div>
-                <div class="col col-sm-4 col-md-3 align-self-center">
-                    <img src="img/logo.png" class="img-fluid" alt="Confusion Logo">
-                </div>
-                <div class="button col col-sm-12 col-md-3 align-self-center">
-                    <a role="button" class="btn btn-info text-white btn-warning btn-block" data-toggle="tooltip" data-html="true" title="Or Call us at <br><strong>+852 12345678</strong>" data-placement="bottom" href="#reservation-form" style="text-decoration: none">Reserve table</a>
-                </div>
-            </div>
-        </div>
-    
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog" role="content">
             <div class="modal-content">
@@ -86,6 +70,76 @@
             </div>
         </div>
     </div>
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row row-header">
+                <div class="col-12 col-sm-8 col-md-6">
+                    <h1>Ristorante con Fusion</h1>
+                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+                </div>
+                <div class="col col-sm-4 col-md-3 align-self-center">
+                    <img src="img/logo.png" class="img-fluid" alt="Confusion Logo">
+                </div>
+                <div class="button col col-sm-12 col-md-3 align-self-center">
+                    <a role="button" class="btn btn-info text-white btn-warning btn-block" style="text-decoration: none" data-toggle="modal" data-target="#reserveModal">Reserve table</a>
+                </div>
+            </div>
+        </div>
+        <div id="reserveModal" class="modal fade" role="dialog">
+            <div class="modal-dialog" role="content">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Reserve a Table</h3>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group row">
+                                <label class="col-form-label col-md-3">Number of Guests</label>
+                                <div class="radio col-md-9">
+                                    <label class="inline-radio mr-4"><input type="radio" name="optradio">1</label>
+                                    <label class="inline-radio mr-4"><input type="radio" name="optradio">2</label>
+                                    <label class="inline-radio mr-4"><input type="radio" name="optradio">3</label>
+                                    <label class="inline-radio mr-4"><input type="radio" name="optradio">4</label>
+                                    <label class="inline-radio mr-4"><input type="radio" name="optradio">5</label>
+                                    <label class="inline-radio mr-4"><input type="radio" name="optradio">6</label>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-form-label col-md-3">Section</label>
+                                <div class="btn-group col-md-9" data-toggle="buttons">
+                                        <label class="btn btn-success btn-sm">
+                                            <input type="radio" name="section" id="nonsmoking" checked>Non-Smoking
+                                        </label>
+                                        <label class="btn btn-danger btn-sm">
+                                            <input type="radio" name="section" id="smoking">Smoking
+                                        </label>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-form-label col-md-3">Date and Time</label>
+                                <div class="col-md-4">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
+                                        <input type="text" class="form-control" name="date" placeholder="Date">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-clock-o fa-fw"></i></span>
+                                        <input type="text" class="form-control" name="time" placeholder="Time">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group-row offset-md-3">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary mr-auto">Reserve</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
     <div class="container">
@@ -266,11 +320,5 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/tether/dist/js/tether.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
 </body>
-
 </html>
